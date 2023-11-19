@@ -1,8 +1,8 @@
 # 工作流名称
-name: registry.k8s.io
+name: nvcr.io
 
 # 工作流运行时显示名称
-run-name: ${{ github.actor }} is sync registry.k8s.io to DockerHub.
+run-name: ${{ github.actor }} is sync nvcr.io to DockerHub.
 
 # 怎样触发工作流
 on:
@@ -36,4 +36,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2 docker://docker.io/${{ github.actor }}/nfs-subdir-external-provisioner:v4.0.2
+        skopeo copy --all docker://nvcr.io/nvidia/k8s/cuda-sample:vectoradd-cuda11.7.1-ubuntu20.04 docker://docker.io/${{ github.actor }}/cuda-sample:vectoradd-cuda11.7.1-ubuntu20.04
