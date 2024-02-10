@@ -37,4 +37,5 @@ jobs:
       run: |
         #!/usr/bin/env bash
         skopeo copy --all docker://nvcr.io/nvidia/k8s/cuda-sample:vectoradd-cuda11.7.1-ubuntu20.04 docker://docker.io/${{ github.actor }}/cuda-sample:vectoradd-cuda11.7.1-ubuntu20.04
-        skopeo copy --all docker://nvcr.io/nvidia/dcgm-exporter:3.2.6-3.1.9-ubuntu20.04 docker://docker.io/${{ github.actor }}/dcgm-exporter:3.2.6-3.1.9-ubuntu20.04
+        skopeo copy --all docker://nvcr.io/nvidia/dcgm-exporter:3.2.6-3.1.9-ubuntu20.04            docker://docker.io/${{ github.actor }}/dcgm-exporter:3.2.6-3.1.9-ubuntu20.04
+        skopeo copy --all docker://nvcr.io/nvidia/cloud-native/gpu-operator-validator:v23.9.1      docker://docker.io/${{ github.actor }}/gpu-operator-validator:v23.9.1
