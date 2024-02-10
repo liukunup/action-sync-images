@@ -38,6 +38,11 @@ jobs:
         #!/usr/bin/env bash
         skopeo copy --all docker://nvcr.io/nvidia/k8s/cuda-sample:vectoradd-cuda11.7.1-ubuntu20.04 docker://docker.io/${{ github.actor }}/cuda-sample:vectoradd-cuda11.7.1-ubuntu20.04
         skopeo copy --all docker://nvcr.io/nvidia/k8s/dcgm-exporter:3.2.6-3.1.9-ubuntu20.04        docker://docker.io/${{ github.actor }}/dcgm-exporter:3.2.6-3.1.9-ubuntu20.04
+        skopeo copy --all docker://nvcr.io/nvidia/k8s/dcgm-exporter:3.3.0-3.2.0-ubuntu22.04        docker://docker.io/${{ github.actor }}/dcgm-exporter:3.3.0-3.2.0-ubuntu22.04
         skopeo copy --all docker://nvcr.io/nvidia/cloud-native/gpu-operator-validator:v23.9.1      docker://docker.io/${{ github.actor }}/gpu-operator-validator:v23.9.1
         skopeo copy --all docker://nvcr.io/nvidia/cloud-native/k8s-driver-manager:v0.6.5           docker://docker.io/${{ github.actor }}/k8s-driver-manager:v0.6.5
-        skopeo copy --all docker://nvcr.io/nvidia/driver:535.129.03-debian11                       docker://docker.io/${{ github.actor }}/driver:535.129.03-debian11
+        skopeo copy --all docker://nvcr.io/nvidia/driver:535.129.03-ubuntu20.04                    docker://docker.io/${{ github.actor }}/driver:535.129.03-ubuntu20.04
+        skopeo copy --all docker://nvcr.io/nvidia/driver:535.129.03-ubuntu22.04                    docker://docker.io/${{ github.actor }}/driver:535.129.03-ubuntu22.04
+        skopeo copy --all docker://nvcr.io/nvidia/gpu-feature-discovery:v0.8.2-ubi8                docker://docker.io/${{ github.actor }}/gpu-feature-discovery:v0.8.2-ubi8
+        skopeo copy --all docker://nvcr.io/nvidia/k8s/container-toolkit:v1.14.3-ubuntu20.04        docker://docker.io/${{ github.actor }}/container-toolkit:v1.14.3-ubuntu20.04
+        skopeo copy --all docker://nvcr.io/nvidia/k8s-device-plugin:v0.14.3-ubi8                   docker://docker.io/${{ github.actor }}/k8s-device-plugin:v0.14.3-ubi8
