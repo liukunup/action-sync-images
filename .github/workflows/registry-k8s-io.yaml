@@ -37,3 +37,5 @@ jobs:
       run: |
         #!/usr/bin/env bash
         skopeo copy --all docker://registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2 docker://docker.io/${{ github.actor }}/nfs-subdir-external-provisioner:v4.0.2
+        skopeo copy --all docker://registry.k8s.io/nfd/node-feature-discovery:v0.14.2 docker://docker.io/${{ github.actor }}/node-feature-discovery:v0.14.2
+
