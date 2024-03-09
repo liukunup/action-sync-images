@@ -36,6 +36,7 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
+        skopeo copy --all docker://registry.k8s.io/pause:3.8                                                                    docker://docker.io/${{ github.actor }}/pause:3.8
         skopeo copy --all docker://registry.k8s.io/pause:3.9                                                                    docker://docker.io/${{ github.actor }}/pause:3.9
         skopeo copy --all docker://registry.k8s.io/kube-scheduler:v1.26.11                                                      docker://docker.io/${{ github.actor }}/kube-scheduler:v1.26.11
         skopeo copy --all docker://registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2                           docker://docker.io/${{ github.actor }}/nfs-subdir-external-provisioner:v4.0.2
