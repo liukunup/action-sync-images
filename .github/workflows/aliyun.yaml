@@ -29,6 +29,7 @@ jobs:
           registry: registry.cn-hangzhou.aliyuncs.com
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+          logout: false
 
       - name: Using Skopeo sync images to Aliyun ACR
         run: |
@@ -58,3 +59,4 @@ jobs:
           skopeo copy --all docker://nvcr.io/nvidia/k8s/container-toolkit:v1.14.3-ubuntu20.04           docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/container-toolkit:v1.14.3-ubuntu20.04
           skopeo copy --all docker://nvcr.io/nvidia/k8s-device-plugin:v0.14.3-ubi8                      docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/k8s-device-plugin:v0.14.3-ubi8
           skopeo copy --all docker://docker.io/ollama/ollama:latest                                     docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/ollama:latest
+          skopeo copy --all docker://docker.io/phpmyadmin/phpmyadmin:latest                             docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/phpmyadmin:latest
