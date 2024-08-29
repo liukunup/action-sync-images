@@ -60,3 +60,5 @@ jobs:
           skopeo copy --all docker://nvcr.io/nvidia/k8s-device-plugin:v0.14.3-ubi8                      docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/k8s-device-plugin:v0.14.3-ubi8
           skopeo copy --all docker://docker.io/ollama/ollama:latest                                     docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/ollama:latest
           skopeo copy --all docker://docker.io/phpmyadmin/phpmyadmin:latest                             docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/phpmyadmin:latest
+          skopeo copy --all docker://docker.io/library/redis:7.2-bookworm                               docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/redis:7.2-bookworm
+          skopeo copy --all docker://docker.io/apache/airflow:2.9.3                                     docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/airflow:2.9.3
