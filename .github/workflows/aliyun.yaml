@@ -34,31 +34,5 @@ jobs:
       - name: Using Skopeo sync images to Aliyun ACR
         run: |
           #!/usr/bin/env bash
-          skopeo copy --all docker://registry.k8s.io/kube-apiserver:v1.27.4                             docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/kube-apiserver:v1.27.4
-          skopeo copy --all docker://registry.k8s.io/kube-controller-manager:v1.27.4                    docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/kube-controller-manager:v1.27.4
-          skopeo copy --all docker://registry.k8s.io/kube-scheduler:v1.27.4                             docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/kube-scheduler:v1.27.4
-          skopeo copy --all docker://registry.k8s.io/kube-proxy:v1.27.4                                 docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/kube-proxy:v1.27.4
-          skopeo copy --all docker://registry.k8s.io/etcd:3.5.7-0                                       docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/etcd:3.5.7-0
-          skopeo copy --all docker://registry.k8s.io/coredns/coredns:v1.10.1                            docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/coredns:v1.10.1
-          skopeo copy --all docker://registry.k8s.io/pause:3.8                                          docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/pause:3.8
-          skopeo copy --all docker://registry.k8s.io/pause:3.9                                          docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/pause:3.9
-          skopeo copy --all docker://registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2 docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/nfs-subdir-external-provisioner:v4.0.2
-          skopeo copy --all docker://registry.k8s.io/nfd/node-feature-discovery:v0.14.2                 docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/node-feature-discovery:v0.14.2
-          skopeo copy --all docker://registry.k8s.io/ingress-nginx/kube-webhook-certgen:v20221220-controller-v1.5.1-58-g787ea74b6 docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/kube-webhook-certgen:v20221220-controller-v1.5.1-58-g787ea74b6
-          skopeo copy --all docker://registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.12.0      docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/kube-state-metrics:v2.12.0
-          skopeo copy --all docker://nvcr.io/nvidia/gpu-operator:v23.9.1                                docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/gpu-operator:v23.9.1
-          skopeo copy --all docker://nvcr.io/nvidia/k8s/cuda-sample:vectoradd-cuda11.7.1-ubuntu20.04    docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/cuda-sample:vectoradd-cuda11.7.1-ubuntu20.04
-          skopeo copy --all docker://nvcr.io/nvidia/k8s/dcgm-exporter:3.2.6-3.1.9-ubuntu20.04           docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/dcgm-exporter:3.2.6-3.1.9-ubuntu20.04
-          skopeo copy --all docker://nvcr.io/nvidia/k8s/dcgm-exporter:3.3.0-3.2.0-ubuntu22.04           docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/dcgm-exporter:3.3.0-3.2.0-ubuntu22.04
-          skopeo copy --all docker://nvcr.io/nvidia/cloud-native/gpu-operator-validator:v23.9.1         docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/gpu-operator-validator:v23.9.1
-          skopeo copy --all docker://nvcr.io/nvidia/cloud-native/k8s-driver-manager:v0.6.5              docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/k8s-driver-manager:v0.6.5
-          skopeo copy --all docker://nvcr.io/nvidia/driver:535.129.03-ubuntu20.04                       docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/driver:535.129.03-ubuntu20.04
-          skopeo copy --all docker://nvcr.io/nvidia/driver:535.129.03-ubuntu22.04                       docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/driver:535.129.03-ubuntu22.04
-          skopeo copy --all docker://nvcr.io/nvidia/driver:450.80.02-ubuntu20.04                        docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/driver:450.80.02-ubuntu20.04
-          skopeo copy --all docker://nvcr.io/nvidia/gpu-feature-discovery:v0.8.2-ubi8                   docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/gpu-feature-discovery:v0.8.2-ubi8
-          skopeo copy --all docker://nvcr.io/nvidia/k8s/container-toolkit:v1.14.3-ubuntu20.04           docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/container-toolkit:v1.14.3-ubuntu20.04
-          skopeo copy --all docker://nvcr.io/nvidia/k8s-device-plugin:v0.14.3-ubi8                      docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/k8s-device-plugin:v0.14.3-ubi8
-          skopeo copy --all docker://docker.io/ollama/ollama:latest                                     docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/ollama:latest
-          skopeo copy --all docker://docker.io/phpmyadmin/phpmyadmin:latest                             docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/phpmyadmin:latest
           skopeo copy --all docker://docker.io/library/redis:7.2-bookworm                               docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/redis:7.2-bookworm
           skopeo copy --all docker://docker.io/apache/airflow:2.9.3                                     docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/airflow:2.9.3
