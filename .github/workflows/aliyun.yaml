@@ -34,5 +34,4 @@ jobs:
       - name: Using Skopeo sync images to Aliyun ACR
         run: |
           #!/usr/bin/env bash
-          skopeo copy --all docker://docker.io/library/redis:7.2-bookworm                               docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/redis:7.2-bookworm
-          skopeo copy --all docker://docker.io/apache/airflow:2.9.3                                     docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/airflow:2.9.3
+          skopeo copy --all docker://docker.io/apache/airflow:2.9.3 docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/airflow:2.9.3
