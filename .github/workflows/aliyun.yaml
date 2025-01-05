@@ -34,4 +34,4 @@ jobs:
       - name: Using Skopeo sync images to Aliyun ACR
         run: |
           #!/usr/bin/env bash
-          skopeo copy --all docker://ghcr.io/homeassistant/amd64-addon-configurator:5.8.0 docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/amd64-addon-configurator:5.8.0
+          skopeo copy --all docker://docker.io/jenkins/jenkins:lts docker://registry.cn-hangzhou.aliyuncs.com/${{ github.actor }}/jenkins:lts
